@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DennCode • Channel Reaction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="brand-card">
+      <div class="logo">D</div>
+      <div class="brand-text">
+        <h1>DennCode</h1>
+        <p>WhatsApp Channel Reaction</p>
+      </div>
+      <button class="hamburger" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="menu-panel" id="menuPanel">
+        <div class="menu-header">
+          <span class="dot r"></span>
+          <span class="dot y"></span>
+          <span class="dot g"></span>
+          <span class="title">denncode@menu ~ %</span>
+        </div>
+        <ul class="menu-list">
+          <li><a href="#" data-modal="info"><span class="prompt">/</span><span class="cmd">Informasi</span></a></li>
+          <li><a href="#" data-modal="developer"><span class="prompt">/</span><span class="cmd">Channel Developer</span></a></li>
+          <li><a href="#" data-modal="profile"><span class="prompt">/</span><span class="cmd">profile</span></a></li>
+        </ul>
+        <div class="menu-footer">3 commands available</div>
+      </div>
+    </div>
+
+    <div class="limit-card">
+      <span class="dot"></span>
+      <span>Limit Harian 1</span>
+      <span class="divider">•</span>
+      <span>Reset setelah 24 jam</span>
+    </div>
+
+    <form id="reactionForm" class="form-card">
+      <div class="field">
+        <label for="url">Link Pesan Saluran</label>
+        <input id="url" name="url" type="url"
+          placeholder="https://whatsapp.com/channel/..." required>
+      </div>
+
+      <div class="field">
+        <label for="reaction">Emoji</label>
+        <input id="reaction" name="reaction" type="text"
+          placeholder="🔥" maxlength="10" required>
+      </div>
+
+      <button id="submitBtn" type="submit">Kirim Sekarang</button>
+    </form>
+
+    <div id="status" class="status hidden"></div>
+
+    <footer>
+      <span>Powered by DennCode</span>
+    </footer>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose" aria-label="Tutup">×</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
